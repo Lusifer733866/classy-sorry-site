@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "A Tiny Bear With a Big Message",
-  description: "A shy little teddy has brought flowers and something to say.",
+  title: "A Small Bouquet With a Big Message",
+  description: "A small bouquet, offered with quiet courage and something sincere to say.",
   openGraph: {
-    title: "A Tiny Bear With a Big Message",
-    description: "A shy little teddy has brought flowers and something to say.",
+    title: "A Small Bouquet With a Big Message",
+    description: "A small bouquet, offered with quiet courage and something sincere to say.",
     images: [],
   },
   twitter: {
-    title: "A Tiny Bear With a Big Message",
-    description: "A shy little teddy has brought flowers and something to say.",
+    title: "A Small Bouquet With a Big Message",
+    description: "A small bouquet, offered with quiet courage and something sincere to say.",
     images: [],
   },
 };
@@ -18,21 +18,20 @@ export const metadata: Metadata = {
 export default function FlowersPage() {
   return (
     <main className="story-page flowers-page">
-      <section className="story-card teddy-card" aria-labelledby="teddy-title">
-        <div className="teddy-visual">
-          <span className="teddy-sticker" aria-hidden="true">for you</span>
-          <div className="teddy-halo" aria-hidden="true" />
+      <section className="story-card bouquet-card" aria-labelledby="bouquet-title">
+        <div className="bouquet-visual">
+          <span className="bouquet-sticker" aria-hidden="true">for you</span>
           <img
-            className="teddy-image"
-            src="/teddy-bear.png"
-            alt="A shy, smiling teddy bear holding a bouquet of daisies and peach tulips"
+            className="bouquet-image"
+            src="/anime-hand-bouquet.png"
+            alt="An adult man’s hand holding a small bouquet, with a minimal outline of his shoulder and torso"
           />
         </div>
 
-        <div className="teddy-copy">
+        <div className="bouquet-copy">
           <p className="overline">a small peace offering</p>
-          <h1 id="teddy-title">
-            A tiny bear with
+          <h1 id="bouquet-title">
+            A small bouquet with
             <em> a big message.</em>
           </h1>
           <blockquote>
