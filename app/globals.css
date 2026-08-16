@@ -322,7 +322,7 @@ h1 em {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: #f4eadb;
+  background: #0d0b09;
 }
 
 .bouquet-image {
@@ -332,28 +332,8 @@ h1 em {
   inset: 0;
   z-index: 1;
   display: block;
-  object-fit: cover;
-  object-position: center 54%;
-}
-
-.bouquet-sticker {
-  position: absolute;
-  top: 35px;
-  right: 27px;
-  z-index: 3;
-  width: 70px;
-  height: 70px;
-  display: grid;
-  place-items: center;
-  color: #77572c;
-  background: var(--butter);
-  border: 1px solid rgb(52 45 42 / 22%);
-  border-radius: 50%;
-  box-shadow: 4px 5px 0 rgb(52 45 42 / 10%);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.76rem;
-  font-style: italic;
-  transform: rotate(9deg);
+  object-fit: contain;
+  object-position: center;
 }
 
 .bouquet-copy {
@@ -465,11 +445,7 @@ h1 em {
   }
 
   .bouquet-visual {
-    min-height: 520px;
-  }
-
-  .bouquet-image {
-    object-position: center 56%;
+    min-height: min(90vw, 780px);
   }
 
   .bouquet-copy {
@@ -526,19 +502,7 @@ h1 em {
   }
 
   .bouquet-visual {
-    min-height: 400px;
-  }
-
-  .bouquet-image {
-    object-position: center 58%;
-  }
-
-  .bouquet-sticker {
-    top: 22px;
-    right: 18px;
-    width: 59px;
-    height: 59px;
-    font-size: 0.68rem;
+    min-height: clamp(500px, 145vw, 780px);
   }
 
   .bouquet-copy {

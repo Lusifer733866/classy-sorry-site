@@ -20,11 +20,10 @@ export default function FlowersPage() {
     <main className="story-page flowers-page">
       <section className="story-card bouquet-card" aria-labelledby="bouquet-title">
         <div className="bouquet-visual">
-          <span className="bouquet-sticker" aria-hidden="true">for you</span>
           <img
             className="bouquet-image"
-            src="/anime-hand-bouquet.png"
-            alt="An adult man’s hand holding a small bouquet, with a minimal outline of his shoulder and torso"
+            src="/anime-man-bouquet.png"
+            alt="An adult anime man in a white shirt offering a bouquet of peach tulips and daisies"
           />
         </div>
 

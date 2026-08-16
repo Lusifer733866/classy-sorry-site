@@ -1,7 +1,7 @@
 # Classy Sorry Site
 
 A warm, friendly three-page apology experience with an elegant entrance, an
-anime-style hand offering flowers, and a simple final “I’m truly sorry” page.
+anime-style man offering flowers, and a simple final “I’m truly sorry” page.
 
 ## Live site
 
@@ -10,7 +10,7 @@ anime-style hand offering flowers, and a simple final “I’m truly sorry” pa
 ## Pages
 
 - Page 1: a gentle entrance
-- Page 2: a masculine anime-style hand offering flowers
+- Page 2: a masculine anime-style man offering flowers
 - Page 3: a clean, minimal apology headline
 
 The Next/Vinext source lives in `app/`. The static GitHub Pages build lives in
