@@ -30,14 +30,6 @@ export default function FlowersPage() {
         </div>
 
         <div className="teddy-copy">
-          <nav className="story-progress" aria-label="Apology story progress">
-            <span className="progress-dot">01</span>
-            <span className="progress-line" aria-hidden="true" />
-            <span className="progress-dot active" aria-current="step">02</span>
-            <span className="progress-line" aria-hidden="true" />
-            <span className="progress-dot">03</span>
-          </nav>
-
           <p className="overline">a small peace offering</p>
           <h1 id="teddy-title">
             A tiny bear with
@@ -47,9 +39,6 @@ export default function FlowersPage() {
             “I brought you flowers… because saying sorry needed a little extra
             courage.”
           </blockquote>
-          <p className="supporting-copy">
-            No grand excuses—just a sincere heart trying to make things right.
-          </p>
 
           <div className="page-actions">
             <a className="text-link" href="/">← Back</a>
