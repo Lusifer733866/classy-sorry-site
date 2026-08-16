@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "I’m Truly Sorry",
@@ -58,9 +57,9 @@ export default function SorryPage() {
           <p>No pressure—just a genuine apology, sent with care.</p>
         </div>
 
-        <Link className="restart-link" href="/">
+        <a className="restart-link" href="/">
           Back to the beginning <span aria-hidden="true">↺</span>
-        </Link>
+        </a>
       </article>
     </main>
   );

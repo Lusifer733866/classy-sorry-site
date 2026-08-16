@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "A Little Note for You",
@@ -39,9 +38,9 @@ export default function EntrancePage() {
           care. So I put these few words together for you.
         </p>
 
-        <Link className="primary-link" href="/flowers">
+        <a className="primary-link" href="/flowers">
           Read the note <span aria-hidden="true">→</span>
-        </Link>
+        </a>
 
         <p className="gentle-hint">Three small pages. One honest message.</p>
       </section>

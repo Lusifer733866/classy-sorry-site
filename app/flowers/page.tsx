@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "A Tiny Bear With a Big Message",
@@ -53,10 +52,10 @@ export default function FlowersPage() {
           </p>
 
           <div className="page-actions">
-            <Link className="text-link" href="/">← Back</Link>
-            <Link className="primary-link" href="/sorry">
+            <a className="text-link" href="/">← Back</a>
+            <a className="primary-link" href="/sorry">
               Hear me out <span aria-hidden="true">→</span>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
