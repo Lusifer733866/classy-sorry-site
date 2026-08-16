@@ -1,7 +1,4 @@
-"use client";
-
 import type { CSSProperties } from "react";
-import { useEffect, useRef, useState } from "react";
 
 const flowers = [
   { x: "clamp(-350px, -33vw, -125px)", y: "clamp(-270px, -28vh, -105px)", size: "42px", delay: "0ms", rotate: "-24deg", color: "#ef9a82" },
@@ -19,67 +16,50 @@ const flowers = [
 ];
 
 export default function SorryReveal() {
-  const [revealed, setRevealed] = useState(false);
-  const messageRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    if (revealed) {
-      messageRef.current?.focus();
-    }
-  }, [revealed]);
-
   return (
-    <main className={revealed ? "story-page sorry-page is-revealed" : "story-page sorry-page"}>
+    <main className="story-page sorry-page">
       <div className="ambient-shape final-shape-one" aria-hidden="true" />
       <div className="ambient-shape final-shape-two" aria-hidden="true" />
 
-      <div className="flower-burst" aria-hidden="true">
-        {flowers.map((flower, index) => (
-          <span
-            className="burst-flower"
-            key={index}
-            style={
-              {
-                "--flower-x": flower.x,
-                "--flower-y": flower.y,
-                "--flower-size": flower.size,
-                "--flower-delay": flower.delay,
-                "--flower-rotate": flower.rotate,
-                "--flower-color": flower.color,
-              } as CSSProperties
-            }
-          />
-        ))}
-      </div>
-
-      {!revealed ? (
-        <section className="story-card reveal-prompt" aria-labelledby="reveal-title">
+      <details className="apology-reveal">
+        <summary className="story-card reveal-prompt">
           <div className="closed-bloom" aria-hidden="true">
             <span />
           </div>
           <p className="overline">one last thing</p>
-          <h1 id="reveal-title">
+          <h1>
             One message,
             <em> from the heart.</em>
           </h1>
           <p className="reveal-intro">A few honest words are waiting for you.</p>
-          <button
-            className="primary-link reveal-button"
-            type="button"
-            aria-expanded="false"
-            aria-controls="apology-message"
-            onClick={() => setRevealed(true)}
-          >
+          <span className="primary-link reveal-button">
             Let it bloom
             <span aria-hidden="true">✦</span>
-          </button>
-        </section>
-      ) : (
+          </span>
+        </summary>
+
+        <div className="flower-burst" aria-hidden="true">
+          {flowers.map((flower, index) => (
+            <span
+              className="burst-flower"
+              key={index}
+              style={
+                {
+                  "--flower-x": flower.x,
+                  "--flower-y": flower.y,
+                  "--flower-size": flower.size,
+                  "--flower-delay": flower.delay,
+                  "--flower-rotate": flower.rotate,
+                  "--flower-color": flower.color,
+                } as CSSProperties
+              }
+            />
+          ))}
+        </div>
+
         <article
           className="apology-letter revealed-letter"
           id="apology-message"
-          ref={messageRef}
-          tabIndex={-1}
           aria-labelledby="sorry-title"
         >
           <div className="letter-seal" aria-hidden="true">a note</div>
@@ -109,7 +89,7 @@ export default function SorryReveal() {
             Back to the beginning <span aria-hidden="true">↺</span>
           </a>
         </article>
-      )}
+      </details>
     </main>
   );
 }
